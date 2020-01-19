@@ -1,0 +1,40 @@
+# ----------------------usthe--------------------- #
+
+# ------usthe deployment------ #
+kind: Deployment
+apiVersion: apps/v1beta2
+metadata:
+ name: usthe-deployment
+ labels: 
+  app: usthe
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: usthe
+ template:
+  metadata:
+   labels:
+    app: usthe
+  spec:
+   containers:
+   - name: nginx
+     image: registry.cn-hangzhou.aliyuncs.com/tomsun28/usthe:latest
+     ports:
+     - containerPort: 80
+
+---
+
+# -------usthe-service--------- #
+apiVersion: v1
+kind: Service
+metadata:
+ name: usthe-service
+spec:
+# type: NodePort
+ ports:
+ - name: web
+   port: 80
+   targetPort: 80
+ selector:
+  app: usthe

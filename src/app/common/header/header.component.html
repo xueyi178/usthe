@@ -1,0 +1,83 @@
+<header class="main-header">
+  <!-- Logo -->
+  <a href="#" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b>US</b>THE</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b>US</b>THE</span>
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a  class="sidebar-toggle" data-toggle="offcanvas" role="button" >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <!-- gitee -->
+        <li class="dropdown messages-menu">
+          <a href='https://gitee.com/tomsun28/bootshiro' target="_blank">
+            <img src='https://gitee.com/tomsun28/bootshiro/badge/star.svg?theme=gray' alt='star'>
+          </a>
+        </li>
+
+        <!--github-->
+        <li class="dropdown messages-menu">
+          <a href='https://github.com/tomsun28/bootshiro' target="_blank">
+            <img src='https://img.shields.io/github/stars/tomsun28/bootshiro.svg?style=social&label=Stars' alt='star'>
+          </a>
+        </li>
+        <!-- User Account: style can be found in dropdown.less -->
+        <li class="dropdown user user-menu">
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <img src="assets/image/avatar.jpg" class="user-image" alt="User Image">
+            <span class="hidden-xs">{{user.username}}</span>
+          </a>
+          <ul class="dropdown-menu">
+            <!-- User image -->
+            <li class="user-header">
+              <img src="assets/image/avatar.jpg" class="img-circle" alt="User Image">
+
+              <p>
+                {{user.username}} - Web Developer
+                <small>Member since Nov. 2018</small>
+              </p>
+            </li>
+            <!-- Menu Body -->
+            <li class="user-body">
+              <div class="row">
+                <div class="col-xs-4 text-center">
+                  <a>Followers</a>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <a>Sales</a>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <a>Friends</a>
+                </div>
+              </div>
+              <!-- /.row -->
+            </li>
+            <!-- Menu Footer-->
+            <li class="user-footer">
+              <div class="pull-left">
+                <a href="http://www.usthe.com" target="_blank" class="btn btn-default btn-flat">博客</a>
+              </div>
+              <div class="pull-right">
+                <a  class="btn btn-default btn-flat" (click)="logout()" >登出</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- Control Sidebar Toggle Button -->
+        <li>
+          <a  data-toggle="control-sidebar" role="button" ><i class="fa fa-gears"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
